@@ -11,12 +11,14 @@ namespace xadrez {
         public Tabuleiro tab {  get; set; }
         private int turno;
         private Cor playerAtual; 
+        public bool terminada { get; private set; }
 
         public PartidaXadrez() {
             this.tab = new Tabuleiro(8, 8);
             this.turno = 1;
             this.playerAtual = Cor.Branca;
             colocarPecas();
+            terminada = false;
 
         }
 
